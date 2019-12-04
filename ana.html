@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <meta charset="utf-8" />
     <title>Object Surplus</title>
-    
+
     <script>
     </script>
     <style>
@@ -17,7 +17,7 @@
         margin: 0px;
         z-index: 100;
       }
-      
+
       .leftdown{
         width: 515px;
         left: 0;
@@ -45,7 +45,7 @@
         background-color: white;
         z-index: 10;
       }
-      
+
       .rightup{
         width: 315px;
         right: 0;
@@ -55,8 +55,8 @@
         background-color: white;
         z-index: 10;
       }
-      
-      
+
+
       #text {
         font-family: Helvetica;
         font-size: 15pt;
@@ -68,7 +68,7 @@
         width: 550px;
         position: relative;
       }
-      
+
       .pool{
         position: absolute;
         top: 180px;
@@ -181,7 +181,73 @@
         top: 2891px;
         color: #b81233;
       }
-     
+
+/* for menu */
+      .top {
+        position: fixed;
+        width:50%;
+      }
+
+      .info {
+        position: fixed;
+        font-size: 26px;
+        color: black;
+        z-index: 999;
+        top: 10px;
+        right: 10px;
+      	padding:0px 0px;
+      	margin-left:0px;
+      	margin-top:0px;
+      	margin-bottom:0px;
+      }
+
+      #tag-menu {
+      	display:none;
+      }
+
+
+      #tag-menu:checked ~ div.drawer {
+       animation: slide-out 0.5s ease;
+       animation-fill-mode: forwards;
+      }
+
+      /* linear-gradient(to right, , rgba(255,0,0,0)); */
+      .drawer {
+        background: radial-gradient(farthest-corner at 60% 55%, rgba(255, 255, 255, 1),rgba(255, 255, 255, 0.75),rgba(255,0,0,0));
+      	position:fixed;
+        top: 0;
+      	right:-500px;
+      	height:100%;
+      	z-index:999;
+      	width:450px;
+      	animation: slide-in 0.5s ease;
+      	animation-fill-mode: forwards;
+        margin-top: 0px;
+        overflow-y: hidden;
+        /* eventually make scroll within a div */
+      }
+
+      .text {
+        text-align: justify;
+        margin-top: 200px;
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-bottom: 30px;
+        font-size: 15px;
+        overflow-y: auto;
+        height: 75vh;
+      }
+
+      @keyframes slide-in {
+       from {right: 0px;}
+       to {right: -450px;}
+      }
+
+      @keyframes slide-out {
+       from {right: -450px;}
+       to {right: 0px;}
+      }
+
     </style>
   </head>
   <body>
@@ -202,14 +268,14 @@
       <br/><br/>
       At the petrifying well of Mother Shipton’s Cave, minerals in the water give objects a coat of stone. <a href="https://www.youtube.com/watch?v=zoJNfGGh_Lk" style="color:#70a633"><span>https://www.youtube.com/watch?v=zoJNfGGh_Lk</span></a> People in the comments argue about pertifying and petrification, <span>and whether or not they trust aging indexes of fossils</span>. The Museum of Mummies in Guanajuato displays naturally preserved, <span>and partially embalmed,</span> humans. Both objects and humans are lacquered over into awe, amusement, and the temporary reverence.
       <br/><br/>
-      Our objects are so many that they choke us. They are pretensions to eternity finally achieved. Little by little they fill our guts and our lakes. Until creatures like the Giant Larvacea build their mucus-web homes, filter the water, and then let them fall to the depths of the sea <font color="#002143">[5]</font>. We try to make the surplus look beautiful. We make the  pictures of destruction grandiose <font color="#bd9b68">[6]</font>.<span>Smoggy sunsets prevail.</span> 
+      Our objects are so many that they choke us. They are pretensions to eternity finally achieved. Little by little they fill our guts and our lakes. Until creatures like the Giant Larvacea build their mucus-web homes, filter the water, and then let them fall to the depths of the sea <font color="#002143">[5]</font>. We try to make the surplus look beautiful. We make the  pictures of destruction grandiose <font color="#bd9b68">[6]</font>.<span>Smoggy sunsets prevail.</span>
       <br/><br/>
       Some people think that mountains are the remains of titans turned to rock. They yell at me “THE WORLD IS NOT WHAT YOU THINK” in Impact Bold over shitty pictures, <span>rocky proof</span>. I don’t justify pseudoscientific conspiracy theories, but I like that this one imagines a great big scale shift. If you go far back enough, <span>to the Carboniferous and early Permian periods,</span> it’s accurate <font color="#0b9ca1">[7]</font>. Maybe we’re just on the verge of the next scale shift for life, this time into the microscopic.
       <br/><br/>
-      We love to follow ropes, further and further, reaching towards the prehistoric. Ruled by our eyes and minds, we bend <span>and flatten</span> metal to see things never seen. Almost every part of every organism is exposed. We burrow into the ocean and into space. Our desires are simple and bee-like but named silly things like horticulture and enabled by state of the art, temperature-controlled, humidity-controlled, light-controlled greenhouses <font color="#919191">[8]</font> <font color="#b81233">[9]</font>. We highjack our instincts about color. <span>I want to ban BP from using green.</span> 
+      We love to follow ropes, further and further, reaching towards the prehistoric. Ruled by our eyes and minds, we bend <span>and flatten</span> metal to see things never seen. Almost every part of every organism is exposed. We burrow into the ocean and into space. Our desires are simple and bee-like but named silly things like horticulture and enabled by state of the art, temperature-controlled, humidity-controlled, light-controlled greenhouses <font color="#919191">[8]</font> <font color="#b81233">[9]</font>. We highjack our instincts about color. <span>I want to ban BP from using green.</span>
       <br/><br/>
       The most reasonable theory is that life started in hydrothermal vents when, by chance, organic compounds formed, —that coincidentally 2.7 Billion years ago, cyanobacteria started producing oxygen. Now, Wikihow tells me how to grow Spirulina at home. Since we invented bread in 8000 BCE, we had too much energy we knew how to use. Since the first cell ate another we carry cannibalism in our genes. My family and I cut a fish open for Christmas and wrap it in banana leaves, green against red.
-      
+
       <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     </div>
     <div id="pics">
@@ -224,7 +290,7 @@
       <div class="clothing"><img src="clothing.jpeg" alt="" style= "width: 490px;"></div>
       <div class="flea"><img src="flea.jpg" alt="" style= "width: 490px;"></div>
     </div>
-    
+
     <div id="notes">
     <div class="n1">1 duh <br/> <hr noshade width="250px" color="#00a3b5"></div>
       <div class="n2">2 weed <br/> <hr noshade width="250px" color="#ded36d"></div>
@@ -236,8 +302,45 @@
       <div class="n8"><span>8</span> <a href="https://www.youtube.com/watch?v=Pk5pJ0-H2nw" style="color:#919191">https://www.youtube.com/watch?v=
 Pk5pJ0-H2nw </a> <br/> <span>Royal Base Corporation</span><br/> <hr noshade width="250px" color="#919191"></div>
       <div class="n9">9 Picture of largest flower market <br/>in the world in Holland<br/> <hr noshade width="250px" color="#b81233"></div>
-      
+
     </div>
-    
+
+    <div class="top">
+      <input type="checkbox" id="tag-menu" />
+      <label class="info" for="tag-menu">
+        TEST!!!!!!
+      </label>
+      <div class="drawer">
+        <p class="text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+          mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+          sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea commodo consequat. Duis aute irure dolor in reprehenderit in
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+          sint occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum.
+        </p>
+      </div>
+
   </body>
 </html>
