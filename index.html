@@ -19,7 +19,7 @@
       }
 
       .leftdown{
-        width: 515px;
+        width: 38.2%;
         left: 0;
         bottom: 0;
         height: 210px;
@@ -28,7 +28,7 @@
         z-index: 10;
       }
       .leftup{
-        width: 515px;
+        width: 38.2%;
         height: 180px;
         left: 0;
         top: 0;
@@ -37,7 +37,7 @@
         z-index: 10;
       }
       .rightdown{
-        width: 315px;
+        width: 20%;
         right: 0;
         bottom: 0;
         height: 410px;
@@ -47,7 +47,7 @@
       }
 
       .rightup{
-        width: 315px;
+        width: 20%;
         right: 0;
         top: 0;
         height: 180px;
@@ -65,8 +65,10 @@
         text-justify: inter-word;
         top: 162px;
         left: 38%;
-        width: 550px;
+        width: 38.5%;
         position: relative;
+        background-color: white;
+        z-index: 3;
       }
 
       .pool{
@@ -181,76 +183,115 @@
         top: 2891px;
         color: #b81233;
       }
-
-/* for menu */
-      .top {
-        position: fixed;
-        width:50%;
+     #pics {
+      width: 36%;
       }
 
-      .info {
-        position: fixed;
-        font-size: 26px;
-        color: black;
-        z-index: 999;
-        top: 10px;
-        right: 10px;
-      	padding:0px 0px;
-      	margin-left:0px;
-      	margin-top:0px;
-      	margin-bottom:0px;
-      }
+      /* for menu */
+            .top {
+              position: fixed;
+              width:50%;
+            }
 
-      #tag-menu {
-      	display:none;
-      }
+            .info {
+              position: fixed;
+              font-size: 26px;
+              color: black;
+              z-index: 999;
+              top: 10px;
+              right: 10px;
+            	padding:0px 0px;
+            	margin-left:0px;
+            	margin-top:0px;
+            	margin-bottom:0px;
+            }
+
+            #tag-menu {
+            	display:none;
+            }
 
 
-      #tag-menu:checked ~ div.drawer {
-       animation: slide-out 0.5s ease;
-       animation-fill-mode: forwards;
-      }
+            #tag-menu:checked ~ div.drawer {
+             animation: slide-out 0.5s ease;
+             animation-fill-mode: forwards;
+            }
 
-      /* linear-gradient(to right, , rgba(255,0,0,0)); */
-      .drawer {
-        background: radial-gradient(farthest-corner at 60% 55%, rgba(255, 255, 255, 1),rgba(255, 255, 255, 0.75),rgba(255,0,0,0));
-      	position:fixed;
-        top: 0;
-      	right:-500px;
-      	height:100%;
-      	z-index:999;
-      	width:450px;
-      	animation: slide-in 0.5s ease;
-      	animation-fill-mode: forwards;
-        margin-top: 0px;
-        overflow-y: hidden;
-        /* eventually make scroll within a div */
-      }
+            /* linear-gradient(to right, , rgba(255,0,0,0)); */
+            .drawer {
+              background: radial-gradient(farthest-corner at 60% 55%, rgba(255, 255, 255, 1),rgba(255, 255, 255, 0.75),rgba(255,0,0,0));
+            	position:fixed;
+              top: 0;
+            	right:-500px;
+            	height:100%;
+            	z-index:999;
+            	width:450px;
+            	animation: slide-in 0.5s ease;
+            	animation-fill-mode: forwards;
+              margin-top: 0px;
+              overflow-y: hidden;
+              /* eventually make scroll within a div */
+            }
 
-      .text {
-        text-align: justify;
-        margin-top: 200px;
-        margin-left: 25px;
-        margin-right: 25px;
-        margin-bottom: 30px;
-        font-size: 15px;
-        overflow-y: auto;
-        height: 75vh;
-      }
+            .text {
+              text-align: justify;
+              margin-top: 200px;
+              margin-left: 25px;
+              margin-right: 25px;
+              margin-bottom: 30px;
+              font-size: 15px;
+              overflow-y: auto;
+              height: 75vh;
+            }
 
-      @keyframes slide-in {
-       from {right: 0px;}
-       to {right: -450px;}
-      }
+            @keyframes slide-in {
+             from {right: 0px;}
+             to {right: -450px;}
+            }
 
-      @keyframes slide-out {
-       from {right: -450px;}
-       to {right: 0px;}
-      }
+            @keyframes slide-out {
+             from {right: -450px;}
+             to {right: 0px;}
+            }
 
     </style>
   </head>
   <body>
+    <div class="top">
+      <input type="checkbox" id="tag-menu" />
+      <label class="info" for="tag-menu">
+        TEST!!!!!!
+      </label>
+      <div class="drawer">
+        <p class="text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
+          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+          mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+          sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+          ea commodo consequat. Duis aute irure dolor in reprehenderit in
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+          sint occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum.
+        </p>
+      </div>
     <div class="name">Object Surplus</div>
     <div id="boxes" body style="margin: 0px;">
       <div class="name">Object Surplus</div>
@@ -304,43 +345,6 @@ Pk5pJ0-H2nw </a> <br/> <span>Royal Base Corporation</span><br/> <hr noshade widt
       <div class="n9">9 Picture of largest flower market <br/>in the world in Holland<br/> <hr noshade width="250px" color="#b81233"></div>
 
     </div>
-
-    <div class="top">
-      <input type="checkbox" id="tag-menu" />
-      <label class="info" for="tag-menu">
-        TEST!!!!!!
-      </label>
-      <div class="drawer">
-        <p class="text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-          sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo consequat. Duis aute irure dolor in reprehenderit in
-          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum.
-        </p>
-      </div>
 
   </body>
 </html>
