@@ -16,6 +16,105 @@
     <script>
     </script>
     <style>
+    .top {
+      position: absolute;
+      width:50%;
+      z-index: 999;
+    }
+
+    .info {
+      position: fixed;
+      font-size: 26px;
+      color: black;
+      z-index: 999;
+      top: 10px;
+      right: 10px;
+      padding:0px 0px;
+      margin-left:0px;
+      margin-top:0px;
+      margin-bottom:0px;
+      font-family: Helvetica;
+    }
+
+    #tag-menu {
+      display:none;
+    }
+
+
+    #tag-menu:checked ~ div.drawer {
+     animation: slide-out 0.5s ease;
+     animation-fill-mode: forwards;
+    }
+
+    /* linear-gradient(to right, , rgba(255,0,0,0)); */
+    .drawer {
+      background: white;
+      position:fixed;
+      top: 0;
+      right:-500px;
+      height:100%;
+      z-index:100;
+      width:450px;
+      animation: slide-in 0.5s ease;
+      animation-fill-mode: forwards;
+      margin-top: 0px;
+      /* eventually make scroll within a div */
+    }
+
+    #whole {
+      text-align: justify;
+      margin-top: 35px;
+      margin-left: 35px;
+      margin-right: 35px;
+      margin-bottom: 30px;
+      padding-right: 10px;
+      overflow-y: auto;
+      height: 90%;
+      font-family: Helvetica;
+      color: black;
+    }
+    #bar_title {
+      font-size: 35px;
+    }
+
+    #bar_text {
+      font-size: 15px;
+    }
+
+    #whole::-webkit-scrollbar {
+      width: 5px;
+      height: 8px;
+      background-color: rgba(0,0,0,0);; /* or add it to the track */
+    }
+
+    /* Add a thumb */
+    #whole::-webkit-scrollbar-thumb {
+      background: url("moss.jpeg");
+    }
+
+    body::-webkit-scrollbar {
+      width: 5px;
+      height: 8px;
+      background-color: rgba(0,0,0,0);; /* or add it to the track */
+    }
+
+    /* Add a thumb */
+    body::-webkit-scrollbar-thumb {
+      background: url("moss.jpeg");
+    }
+
+
+
+    @keyframes slide-in {
+     from {right: 0px;}
+     to {right: -450px;}
+    }
+
+    @keyframes slide-out {
+     from {right: -450px;}
+     to {right: 0px;}
+    }
+
       .name {
         font-family: Times New Roman;
         font-size: 62pt;
@@ -193,139 +292,10 @@
       width: 36%;
       }
 
-      /* .top {
-        position: fixed;
-        width:50%;
-      }
-
-      /* #question {
-        height: 25px;
-      } */
-
-      /*.info {
-        position: fixed;
-        font-size: 26px;
-        color: white;
-        z-index: 999;
-        top: 10px;
-        right: 10px;
-      	padding:0px 0px;
-      	margin-left:0px;
-      	margin-top:0px;
-      	margin-bottom:0px;
-      }
-
-      #tag-menu {
-      	display:none;
-      }
-
-
-      #tag-menu:checked ~ div.drawer {
-       animation: slide-out 0.5s ease;
-       animation-fill-mode: forwards;
-      }
-
-      /* linear-gradient(to right, , rgba(255,0,0,0)); */
-      /*.drawer {
-        background: radial-gradient(farthest-corner at 60% 55%, rgba(255, 255, 255, 1),rgba(255, 255, 255, 0.75),rgba(255,0,0,0));
-      	position:fixed;
-        top: 0;
-      	right:-500px;
-      	height:100%;
-      	z-index:100;
-      	width:450px;
-      	animation: slide-in 0.5s ease;
-      	animation-fill-mode: forwards;
-        margin-top: 0px;
-        /* eventually make scroll within a div */
-      } */
-
-      /*.text {
-        text-align: justify;
-        margin-top: 200px;
-        margin-left: 35px;
-        margin-right: 35px;
-        margin-bottom: 30px;
-        font-size: 15px;
-        overflow-y: auto;
-        height: 75vh;
-      }
-
-      @keyframes slide-in {
-       from {right: 0px;}
-       to {right: -450px;}
-      }
-
-      @keyframes slide-out {
-       from {right: -450px;}
-       to {right: 0px;}
-      } */
 
     </style>
   </head>
   <body>
-    <!-- <div class="top">
-      <input type="checkbox" id="tag-menu" />
-      <label class="info" for="tag-menu">
-        ?
-      </label>
-      <div class="drawer">
-        <p class="text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-          sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-          tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-          veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-          ea commodo consequat. Duis aute irure dolor in reprehenderit in
-          voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-          sint occaecat cupidatat non proident, sunt in culpa qui officia
-          deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
-          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-          proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-          do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum
-          dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-          commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-          velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-          occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-          mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-          ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-          irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-          fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-          sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </div> -->
     <div class="name">Object Surplus</div>
     <div id="boxes" body style="margin: 0px;">
       <div class="name">Object Surplus</div>
@@ -379,6 +349,41 @@ Pk5pJ0-H2nw </a> <br/> <span>Royal Base Corporation</span><br/> <hr noshade widt
       <div class="n9">9 Picture of largest flower market <br/>in the world in Holland<br/> <hr noshade width="250px" color="#b81233"></div>
 
     </div>
+
+    <div class="top">
+      <input type="checkbox" id="tag-menu" />
+      <label class="info" for="tag-menu">
+        ?
+      </label>
+      <div class="drawer">
+        <div id = "whole">
+          <p id = "bar_title"> Ana Hierro <br/></p>
+          <p id = "bar_text">
+            I was thinking of whispering as being used when you aren’t too sure about what you’re saying. <br />
+            <br />
+            <i> I think of whispers and I think of someone getting too close, wanting me to hear them and remember what they said because it was only meant for me. I think of intimacy, I would only let those I trust that close to me. </i> <br />
+            <br />
+            I remembered the more obvious connotation of protecting what you’re saying by limiting your audience. It’s like making coded artwork that speaks through subtlety and can only be understood by certain people.<br />
+            <br />
+            <i>I also think of uncertainty, of someone muttering something under their breath. Wanting to be heard but not wanting to take ownership. But as I think of it more I think those that whisper under their breath really want people to hear them and recognize a certain part of their speech. </i>
+            <br />
+            <i>They want to be remembered.</i> <br />
+            <br />
+            I wonder also how a text can contain its own aside or internal commentary—if a text can have a second voice within itself. <br />
+            <br />
+            <i>Maybe a companion, a voice to encourage the one that is being heard.</i><br />
+            <br />
+            I remember what you said about the whisper being the most memorable thing in a normal conversation. I’m interested in the line between calm, collected argument and unfiltered communication. We don’t think in 12 pt font all the time.<br />
+            <br />
+            <i>I think of the way, when learning how to speak in public, we are told to vary our tones. Because monotonous voices are largely left unheard. But we are always told to speak up when speaking to an audience. Maybe the opposite holds when speaking to someone close by, maybe we should tone down to be heard.</i><br />
+            <br />
+            Maybe we should listen more to whispers. Maybe calm and authoritative tones are overrated.
+            <br />
+            <br />
+            -Ana Hierro & <i>Nicole Lindner</i><br />
+          </p>
+        </div>
+      </div>
 
   </body>
 </html>
